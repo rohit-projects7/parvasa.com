@@ -1,0 +1,208 @@
+:root {
+    margin: 0, auto;
+   min-height: 100vh;
+    max-width: 1280vh;
+
+}
+
+body {
+    margin: 0;
+    background-color: white;
+    font-family: Briem+Hand, sans-serif;
+
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+    background-color: rgb(7, 36, 28);
+}
+
+ nav .logo {
+    display: flex;
+    align-items: center;
+}
+
+ nav .logo img {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    padding: 8px;
+   
+
+}
+
+ nav .logo .title {
+    margin-left: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+
+nav ul {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    list-style: none;
+    
+}
+
+nav ul li {
+    color: white;
+    padding: 22px 40px;
+    background-color: rgb(2, 31, 2);
+}
+
+nav ul li:hover{
+    background-color: rgb(7, 36, 28);
+}
+
+.active{
+    background-color: rgb(7, 36, 28);
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+@media all and (max-width: 800px){
+    nav {
+        justify-content: flex-start;
+    }
+    nav ul {
+        justify-content: space-between;
+    }
+}
+
+@media all and (max-width: 600px){
+    nav {
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    nav ul {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    nav ul li {
+        text-align: center;
+    }
+
+    .contect {
+        flex-direction: column;
+    }
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 650px;
+    background-image:url(resourses/pexels-photo-3872899.webp);
+    background-size: cover;
+    text-align: center;
+    
+}
+
+@keyframes appear {
+    from {
+        opacity: 0.0;
+        top: -100px;
+    }
+
+    to {
+
+        opacity: 1.0;
+        top: 0.0;
+
+    }
+}
+
+.banner .heading {
+
+    flex: 1;
+    justify-self: center;
+    font-size: 3rem;
+    color: white;
+    position: relative;
+    animation: appear 1s ease-in-out 0s forwards;
+
+}
+
+.heading small {
+    font-size: 24px;
+}
+
+
+.inquries {
+    border-top: 5px solid rgb(24, 107, 24);
+    border-bottom: 5px solid rgb(24, 107, 24);
+    padding: 8px;
+    color: rgb(24, 107, 24);
+}
+
+.contect {
+    display: flex;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px 0px;
+
+}
+
+.contect form {
+    flex: 1;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    height: 50px;
+
+}
+
+input[type=submit]{
+    background-color: rgb(74, 145, 79);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    color: white;
+    
+}
+
+input[type=submit]:hover{
+    background-color: rgb(19, 78, 19);
+}
+
+.map{
+    padding: 12px;
+    flex: 1;
+    border-radius: 8px;
+}
+
+.footer {
+    text-align: center;
+    padding: 24px;
+    background-color: rgb(7, 36, 28);
+    color: white;
+    font-style: italic;
+    font-size: 25px;
+}
+
+address {
+    font-size: 16px;
+}
